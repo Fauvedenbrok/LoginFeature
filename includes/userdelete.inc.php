@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST"){
 
     try{
         require_once "dbh.inc.php";
-        $query = "INSERT INTO users (email, user_password) VALUES (:email, :user_password);";
+        $query = "DELETE FROM users WHERE email = :email AND user_password = :user_password";
 
         $stmt = $pdo->prepare($query);
 
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST"){
         $stmt = null;
 
         header("Location: ../index.php");
-
+        
         die();
     } catch(PDOException $e){
         die("Query failed: " . $e->getMessage());
