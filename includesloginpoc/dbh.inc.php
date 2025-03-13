@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "fittingly_database";
+$dbname = "login_poc_database";
 $dbusername = "root";
 $dbpassword = "";
 

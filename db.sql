@@ -1,8 +1,8 @@
 CREATE TABLE Users (
-    `Email` VARCHAR (100) NOT NULL PRIMARY KEY,
-    `Password` VARCHAR(255) NOT NULL,
-    `Account status` BOOLEAN DEFAULT NULL,
-    `Account Access Rights` ENUM ('Customer', 'Partner', 'Admin'),
-    `Created at` DATETIME NOT NULL  DEFAULT CURRENT_TIME
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR (50) NOT NULL,
+    email VARCHAR (100) NOT NULL PRIMARY KEY,
+    user_password VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL  DEFAULT CURRENT_TIME
 );
 
