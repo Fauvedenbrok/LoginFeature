@@ -16,3 +16,10 @@
     font-weight: bold;
     color: red;
 }
+
+.form-success {
+    justify-self: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
