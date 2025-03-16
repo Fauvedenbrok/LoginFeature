@@ -15,6 +15,11 @@ require_once 'includes/login_view.inc.php';
 <body>
 
     <div class="forms">
+        <h3>
+            <?php
+                output_username();
+            ?>
+        </h3>
         <div class="login-form">
             <h3>Login</h3>
             <form class="form" action="includes/login.inc.php" method="post">
@@ -42,6 +47,12 @@ require_once 'includes/login_view.inc.php';
                 check_signup_errors();
             ?>
 
+        </div>
+        <div class="logout">
+            <h3>Logout</h3>
+            <form class="form" action="includes/logout.inc.php" method="post">
+                <button>Logout</button>
+            </form>
         </div>
     </div>
 </body>
