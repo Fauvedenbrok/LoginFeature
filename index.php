@@ -22,7 +22,7 @@
             <form class="form" action="includes/signup.inc.php" method="post">
                 <input type="text" name="first_name" placeholder="First name">
                 <input type="text" name="last_name" placeholder="Last name">
-                <input type="text" name="email" placeholder="Username">
+                <input type="text" name="email" placeholder="Email">
                 <input type="password" name="user_password" placeholder="Password">
                 <button>Sign up</button>
             </form>
