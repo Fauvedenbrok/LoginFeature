@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "fittingly_database";
+$dbname = "fittingly_login";
 $dbusername = "root";
 $dbpassword = "";
 

@@ -29,22 +29,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($errors){
             $_SESSION["errors_signup"] = $errors;
             header("location: ../index.php");
+            die();
         }
 
-        $query = "INSERT INTO users (email, user_password) VALUES (:email, :user_password);";
+        create_user($pdo, $first_name, $last_name, $email, $user_password);
 
-        $stmt = $pdo->prepare($query);
-
-        $stmt->bindParam(":email", $email);
-        $stmt->bindParam(":user_password", $user_password);
-
-        $stmt->execute();
+        header("location: ../index.php?signup=success");
 
         $pdo = null;
         $stmt = null;
 
-        header("Location: ../login_poc.php");
-        
         die();
     } catch(PDOException $e){
         die("Query failed: " . $e->getMessage());
